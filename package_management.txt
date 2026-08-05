@@ -1,0 +1,82 @@
+Package Management using npm
+
+Objective
+Learn how to install npm packages, understand their purpose, and remove unnecessary packages.
+
+------------------------------------------------------------
+Step 1: Initialize the Project
+------------------------------------------------------------
+
+Command:
+npm init -y
+
+This command creates a package.json file for the project.
+
+------------------------------------------------------------
+Step 2: Install Five npm Packages
+------------------------------------------------------------
+
+Commands:
+
+npm install express
+npm install mongoose
+npm install dotenv
+npm install cors
+npm install nodemon
+
+------------------------------------------------------------
+Purpose of Installed Packages
+------------------------------------------------------------
+
+1. Express
+Purpose:
+Express is a web framework used to create web servers and REST APIs quickly.
+
+2. Mongoose
+Purpose:
+Mongoose is used to connect Node.js applications with MongoDB and create schemas and models.
+
+3. Dotenv
+Purpose:
+Dotenv loads environment variables from a .env file, helping keep sensitive information like database URLs secure.
+
+4. CORS
+Purpose:
+CORS (Cross-Origin Resource Sharing) allows requests between different domains or ports.
+
+5. Nodemon
+Purpose:
+Nodemon automatically restarts the Node.js application whenever source code changes are made during development.
+
+------------------------------------------------------------
+Step 3: Remove an Unnecessary Package
+------------------------------------------------------------
+
+Suppose the CORS package is no longer required.
+
+Command:
+
+npm uninstall cors
+
+This command removes the package from node_modules and updates package.json automatically.
+
+------------------------------------------------------------
+Project Structure
+------------------------------------------------------------
+
+my-node-project/
+
+│── node_modules/
+│── package.json
+│── package-lock.json
+└── package_management.txt
+
+------------------------------------------------------------
+Summary
+------------------------------------------------------------
+
+• Initialized a Node.js project using npm.
+• Installed five npm packages.
+• Learned the purpose of each package.
+• Removed an unnecessary package using npm uninstall.
+• Verified that package.json is updated automatically after installation and removal.
