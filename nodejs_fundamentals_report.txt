@@ -1,0 +1,160 @@
+Node.js Fundamentals Research Report
+
+------------------------------------------------------------
+Introduction
+------------------------------------------------------------
+
+Node.js is an open-source JavaScript runtime environment built on Google's V8 JavaScript engine. It allows developers to execute JavaScript on the server side and is widely used for building fast and scalable web applications.
+
+------------------------------------------------------------
+1. Node.js Architecture
+------------------------------------------------------------
+
+Node.js uses an event-driven, non-blocking I/O architecture. It runs on a single thread and efficiently handles multiple client requests using the Event Loop instead of creating a new thread for every request.
+
+Diagram:
+
+                 Client Request
+                       |
+                       v
+               +----------------+
+               |  Node.js Server|
+               +----------------+
+                       |
+                 Event Loop
+                       |
+          -------------------------
+          |          |            |
+      Request 1  Request 2   Request 3
+          |          |            |
+          -------------------------
+                       |
+                   Database
+                       |
+                 Response Sent
+
+------------------------------------------------------------
+2. Event Loop
+------------------------------------------------------------
+
+The Event Loop is the core of Node.js. It continuously checks for tasks and executes them without blocking the application.
+
+Example:
+
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Task Completed");
+}, 2000);
+
+console.log("End");
+
+Output:
+
+Start
+End
+Task Completed
+
+------------------------------------------------------------
+3. npm (Node Package Manager)
+------------------------------------------------------------
+
+npm is the default package manager for Node.js. It helps developers install, update, and manage external libraries.
+
+Common Commands:
+
+npm init -y
+npm install express
+npm install mongoose
+npm uninstall express
+
+------------------------------------------------------------
+4. Node.js Modules
+------------------------------------------------------------
+
+Modules help organize code into reusable files.
+
+Types of Modules:
+1. Core Modules (fs, http, path)
+2. Local Modules (created by developers)
+3. Third-party Modules (installed using npm)
+
+Example:
+
+const fs = require("fs");
+
+------------------------------------------------------------
+5. Synchronous vs Asynchronous Programming
+------------------------------------------------------------
+
+Synchronous Programming:
+- Executes one task at a time.
+- Each task waits for the previous one to finish.
+
+Example:
+
+console.log("Task 1");
+console.log("Task 2");
+
+Asynchronous Programming:
+- Executes tasks without blocking other operations.
+- Improves application performance.
+
+Example:
+
+console.log("Task 1");
+
+setTimeout(() => {
+    console.log("Task 2");
+}, 1000);
+
+console.log("Task 3");
+
+Output:
+
+Task 1
+Task 3
+Task 2
+
+------------------------------------------------------------
+6. Common Backend Use Cases
+------------------------------------------------------------
+
+Node.js is commonly used for:
+
+• REST APIs
+• Real-time Chat Applications
+• E-commerce Websites
+• Streaming Applications
+• Social Media Platforms
+• Online Gaming Servers
+• Dashboard Applications
+• Microservices
+
+------------------------------------------------------------
+Use Case Diagram
+------------------------------------------------------------
+
+                Node.js
+                   |
+    ---------------------------------
+    |        |        |            |
+  REST API  Chat   E-commerce  Streaming
+    |        |        |            |
+ Dashboard Gaming  Social Media  IoT
+
+------------------------------------------------------------
+Advantages of Node.js
+------------------------------------------------------------
+
+• Fast execution using the V8 engine.
+• Non-blocking architecture.
+• Handles many users simultaneously.
+• Large npm ecosystem.
+• Uses JavaScript for both frontend and backend.
+
+------------------------------------------------------------
+Conclusion
+------------------------------------------------------------
+
+Node.js is a powerful backend technology that uses an event-driven architecture and the Event Lo
